@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Infinity Phenomenal Software</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.svg">
     <!-- Pignose Calender -->
     <link href="./plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
     <!-- Chartist -->
@@ -20,11 +20,47 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kanit:wght@500;700&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <style>
+        li:focus i,
+        .nk-sidebar .metismenu>li.active i {
+            color: #f7ff0a !important;
+        }
+
+        .nk-sidebar .metismenu>li:hover i,
+        .nk-sidebar .metismenu>li:focus i,
+        .nk-sidebar .metismenu>li.active i {
+            color: #f7ff0a !important;
+        }
+
+        .nk-sidebar .metismenu>li a>i {
+            font-size: 0.95rem;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 0.4375rem 0 0;
+            color: #ffc742;
+        }
+    </style>
+    {{-- <style>
+            body{
+                font-family: 'Kanit', sans-serif; font-weight:600;
+            }
+        </style> --}}
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-
+        {{-- <style>
+            body{
+                font-family: 'Kanit', sans-serif; font-weight:600;
+            }
+        </style> --}}
         <!--*******************
              Preloader start
             ********************-->
@@ -50,7 +86,7 @@
             <!--**********************************
                     Nav header start
                 ***********************************-->
-            <div class="nav-header" style="background-color: #fff;">
+            <div class="nav-header" style="background-color: rgb(255, 255, 255);">
                 <div class="brand-logo">
                     <a href="index.html">
                         <b class="logo-abbr" style="margin: -7px;"><img src="images/logo.svg" alt=""> </b>
@@ -274,42 +310,45 @@
                     <ul class="metismenu" id="menu">
                         <li class="nav-label">Dashboard</li>
                         <li>
-                            <a class="has" href="#" alt="">
-                                <i class="bi bi-house-door-fill menu-icon; mr-2"></i><span
-                                    class="nav-text">หน้าหลัก</span>
+                            <a class="has" href="index.html" alt="">
+                                <i class="bi bi-house-door-fill menu-icon; mr-2 " style="font-size: 1.8rem;"></i><span
+                                    class="nav-text" style="font-size: 20px;">หน้าหลัก</span>
                             </a>
                             <!-- <ul aria-expanded="false">
                             <li><a href="./index.html">Home 1</a></li>
-                        </ul> -->
+                            </ul> -->
                         </li>
                         <li class="mega-menu mega-menu-sm">
-                            <a class="has" href="#" alt="">
-                                <i class="bi bi-file-earmark-text-fill menu-icon; mr-2 "></i><span
-                                    class="nav-text ">แบบฟอร์มใบลา</span>
+                            <a class="has" href="index.html" alt="">
+                                <i class="bi bi-file-earmark-text-fill menu-icon  mr-2 "
+                                    style="font-size: 1.8rem;"></i><span class="nav-text "
+                                    style="font-size: 20px;">แบบฟอร์มใบลา</span>
                             </a>
                         </li>
                         <li class="mega-menu mega-menu-sm">
-                            <a class="has" href="#" alt="">
-                                <i class="bi bi-bar-chart-line-fill menu-icon; mr-2 "></i><span
-                                    class="nav-text ">สรุปการลา</span>
+                            <a class="has" href="index.html" alt="">
+                                <i class="bi bi-bar-chart-line-fill menu-icon mr-2 "
+                                    style="font-size: 1.8rem;"></i><span class="nav-text "
+                                    style="font-size: 20px;">สรุปการลา</span>
                             </a>
                         </li>
                         <li class="mega-menu mega-menu-sm">
-                            <a class="has" href="#" alt="">
-                                <i class="bi bi-people-fill menu-icon; mr-2 "></i><span
-                                    class="nav-text ">พนักงาน</span>
+                            <a class="has" href="index.html" alt="">
+                                <i class="bi bi-people-fill menu-icon mr-2 " style="font-size: 1.8rem;"></i><span
+                                    class="nav-text " style="font-size: 20px;">พนักงาน</span>
                             </a>
                         </li>
                         <li class="mega-menu mega-menu-sm">
                             <a class="has" href="page-login.html" alt="">
-                                <i class="bi bi-box-arrow-right menu-icon; mr-2 "></i><span
-                                    class="nav-text ">ออกจากระบบ</span>
+                                <i class="bi bi-box-arrow-right menu-icon mr-2 " style="font-size: 1.8rem;"></i><span
+                                    class="nav-text " style="font-size: 20px;">ออกจากระบบ</span>
                             </a>
                         </li>
                         <li class="nav-label ">Apps</li>
                         <li>
                             <a href="widgets.html " aria-expanded="false ">
-                                <i class="icon-badge menu-icon "></i><span class="nav-text ">Widget</span>
+                                <i class="icon-badge menu-icon " style="font-size: 1.8rem;"></i><span
+                                    class="nav-text " style="font-size: 20px;">Widget</span>
                             </a>
                         </li>
                 </div>

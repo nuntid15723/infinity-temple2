@@ -2,7 +2,7 @@
 @section('content')
     <div class="container-fluid mt-2 ">
         <div class="row ">
-            <div class="col-lg-4 col-sm-8 ">
+            <div class="col-lg-4 col-sm-4 ">
                 <div class="card gradient-1 ">
                     <div class="card-body ">
                         <h2 class="card-title text-white ">ยอดรวมการลา</h2>
@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-8 ">
+            <div class="col-lg-4 col-sm-4 ">
                 <div class="card gradient-2 ">
                     <div class="card-body ">
                         <h2 class="card-title text-white ">เงินเดือนพนักงาน</h2>
@@ -24,7 +24,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-8 ">
+            <div class="col-lg-4 col-sm-4 ">
                 <div class="card gradient-3 ">
                     <div class="card-body ">
                         <h2 class="card-title text-white ">พนักงาน</h2>
@@ -41,7 +41,7 @@
     <div class="row ">
         <div class="col-lg-12 ">
             <div class="row ">
-                <div class="col-lg-8 col-sm-8 ">
+                <div class="col-lg-8 col-sm-4 ">
                     <div class="card ">
                         <div class="card-body pb-0 d-flex justify-content-between ">
                             <div>
