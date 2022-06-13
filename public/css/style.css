@@ -2864,13 +2864,13 @@ fieldset:disabled a.btn {
     color: #9097c4;
     background-color: transparent;
     background-image: none;
-    border-color: #9097c4;
+    border-color: #A19C9C;
 }
 
 .btn-outline-secondary:hover {
-    color: #212529;
-    background-color: #9097c4;
-    border-color: #9097c4;
+    color: #A19C9C;
+    background-color: #A19C9C;
+    border-color: #A19C9C;
 }
 
 .btn-outline-secondary:focus,
@@ -15540,15 +15540,15 @@ table.dataTable thead .sorting::after {
 }
 
 .btn-outline-secondary {
-    color: #464a53;
+    color: #A19C9C;
 }
 
 .btn-outline-secondary:active,
 .btn-outline-secondary:focus,
 .btn-outline-secondary:hover {
-    background: #6f78b2;
+    background: #A19C9C;
     color: #fff;
-    border-color: #6f78b2;
+    border-color: #A19C9C;
 }
 
 .btn-outline-success:active,

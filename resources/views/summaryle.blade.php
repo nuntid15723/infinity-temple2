@@ -62,32 +62,32 @@
             <div class="card " style="margin: 25px;">
                 <div class="card-body ">
                     <div class="active-member ">
-                        <div class="table-responsive ">
+                        <div class="table-responsive " style="font-family: 'Prompt', sans-serif; font-weight:400;">
                             <table class="table table-xs mb-0 ">
-                                <thead>
-                                    <h2>ประวิติการลา</h2>
+                                <thead >
+                                    <h2 style="font-family: 'Kanit', sans-serif; font-weight:600; color: #164176;">ประวิติการลา</h2>
                                     <tr>
-                                        <th style="font-family: 'Kanit', sans-serif; font-weight:600;">#</th>
-                                        <th style="font-family: 'Kanit', sans-serif; font-weight:600;">ชื่อ</th>
-                                        <th style="font-family: 'Kanit', sans-serif; font-weight:600;">แผนก</th>
-                                        <th style="font-family: 'Kanit', sans-serif; font-weight:600;">วันที่ลา</th>
-                                        <th style="font-family: 'Kanit', sans-serif; font-weight:600;">วันที่สิ้นสุด</th>
-                                        <th style="text-align: center; font-family: 'Kanit', sans-serif; font-weight:600;">
+                                        <th style="font-family: 'Kanit', sans-serif; font-weight:600;color: #FFD027;">#</th>
+                                        <th style="font-family: 'Kanit', sans-serif; font-weight:600;color: #164176;">ชื่อ</th>
+                                        <th style="font-family: 'Kanit', sans-serif; font-weight:600;color: #FFD027;">แผนก</th>
+                                        <th style="font-family: 'Kanit', sans-serif; font-weight:600;color: #164176;">วันที่ลา</th>
+                                        <th style="font-family: 'Kanit', sans-serif; font-weight:600;color: #FFD027;">วันที่สิ้นสุด</th>
+                                        <th style="text-align: center; font-family: 'Kanit', sans-serif; font-weight:600;color: #164176;">
                                             สถานะการลา</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
+                                        <td style="font-family: 'Prompt', sans-serif; font-weight:400;">1</td>
                                         <td><img src="./images/avatar/1.jpg "
-                                                class=" rounded-circle mr-3 " alt=" ">Sarah
+                                                class=" rounded-circle mr-3 " alt="" >Sarah
                                             Smith</td>
-                                        <td>iPhone X</td>
+                                        <td  style="font-family: 'Prompt', sans-serif; font-weight:400;">นักพัฒนาโปรแกรม</td>
                                         <td>
-                                            <span>United States</span>
+                                            <span style="font-family: 'Prompt', sans-serif; font-weight:400;">United States</span>
                                         </td>
                                         <td>
-                                            <span>United States</span>
+                                            <span style="font-family: 'Prompt', sans-serif; font-weight:400;">United States</span>
                                         </td>
                                         <td>
                                             <a class="has" href="#" alt="">
@@ -110,10 +110,10 @@
 
                                     </tr>
                                     <tr>
-                                        <td>2</td>
-                                        <td><img src="./images/avatar/1.jpg " class=" rounded-circle mr-3 " alt=" ">Sarah
+                                        <td style="font-family: 'Prompt', sans-serif; font-weight:400;">2</td>
+                                        <td style="font-family: 'Prompt', sans-serif; font-weight:400;"><img src="./images/avatar/1.jpg " class=" rounded-circle mr-3 " alt=" ">Sarah
                                             Smith</td>
-                                        <td>iPhone X</td>
+                                        <td style="font-family: 'Prompt', sans-serif; font-weight:400;">iPhone X</td>
                                         <td>
                                             <span>United States</span>
                                         </td>
@@ -136,15 +136,15 @@
 
                                     </tr>
                                     <tr>
-                                        <td>3</td>
-                                        <td><img src="./images/avatar/1.jpg " class=" rounded-circle mr-3 " alt=" ">Sarah
+                                        <td style="font-family: 'Prompt', sans-serif; font-weight:400;">3</td>
+                                        <td style="font-family: 'Prompt', sans-serif; font-weight:400;"><img src="./images/avatar/1.jpg " class=" rounded-circle mr-3 " alt=" ">Sarah
                                             Smith</td>
-                                        <td>iPhone X</td>
+                                        <td style="font-family: 'Prompt', sans-serif; font-weight:400;">iPhone X</td>
                                         <td>
-                                            <span>United States</span>
+                                            <span style="font-family: 'Prompt', sans-serif; font-weight:400;">United States</span>
                                         </td>
                                         <td>
-                                            <span>United States</span>
+                                            <span style="font-family: 'Prompt', sans-serif; font-weight:400;">United States</span>
                                         </td>
                                         <td><a class="has" href="#" alt="">
                                                 <div class="card"
@@ -161,11 +161,11 @@
 
                                     </tr>
                                     <tr>
-                                        <td>4</td>
-                                        <td><img src="./images/avatar/1.jpg " class=" rounded-circle mr-3 " alt=" ">Sarah
+                                        <td style="font-family: 'Prompt', sans-serif; font-weight:400;">4</td>
+                                        <td style="font-family: 'Prompt', sans-serif; font-weight:400;"><img src="./images/avatar/1.jpg " class=" rounded-circle mr-3 " alt=" ">Sarah
                                             Smith</td>
-                                        <td>iPhone X</td>
-                                        <td>
+                                        <td style="font-family: 'Prompt', sans-serif; font-weight:400;">iPhone X</td>
+                                        <td style="font-family: 'Prompt', sans-serif; font-weight:400;">
                                             <span>United States</span>
                                         </td>
                                         <td>

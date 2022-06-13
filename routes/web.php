@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +22,9 @@ use App\Http\Controllers\ProductController;
 Route::get('/', function () {
     return view('home');
 })->name('/');
+
+Route::get('/form', [AdminController::class, 'form'])->name('form');
+Route::get('/summaryle', [AdminController::class, 'summaryle'])->name('summaryle');
 
 Route::get('home', [HomeController::class, 'index'])->name('home');
 
@@ -39,3 +44,6 @@ Route::post('registerApi', [RegisterController::class, 'registerApi'])->name('re
 
 // form product
 Route::get('form/product/new', [ProductController::class, 'index'])->name('form/product/new');
+
+Auth::routes();
+

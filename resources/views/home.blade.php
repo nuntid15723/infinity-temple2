@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
-    <div class="container-fluid mt-2 ">
-        <div class="row ">
+    <div class="container-fluid mt-2">
+        <div class="row " style="font-family: 'Kanit', sans-serif; font-weight:600;">
             <div class="col-lg-4 col-sm-4 ">
                 <div class="card gradient-1 ">
                     <div class="card-body ">
@@ -38,11 +38,11 @@
         </div>
     </div>
 
-    <div class="row ">
+    <div class="row " style="font-family: 'Prompt', sans-serif; font-weight:400;">
         <div class="col-lg-12 ">
             <div class="row ">
                 <div class="col-lg-8 col-sm-4 ">
-                    <div class="card ">
+                    <div class="card " style="margin-left: 30PX; margin-right: 10px;">
                         <div class="card-body pb-0 d-flex justify-content-between ">
                             <div>
                                 <h4 class="mb-1 ">Product Sales</h4>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4 ">
-                    <div class="card ">
+                    <div class="card "style=" margin-right: 30px;">
                         <div class="card-body pb-0 d-flex justify-content-between ">
                             <div>
                                 <h4 class="mb-1 ">Product Sales</h4>
@@ -91,15 +91,15 @@
             </div>
         </div>
     </div>
-    <div class="row ">
+    <div class="row">
         <div class="col-lg-12 ">
-            <div class="card ">
+            <div class="card "style="margin-left: 30PX; margin-right: 30px;">
                 <div class="card-body ">
-                    <div class="active-member ">
+                    <div class="active-member " style="font-family: 'Prompt', sans-serif; font-weight:400;">
                         <div class="table-responsive ">
                             <table class="table table-xs mb-0 ">
                                 <thead>
-                                    <tr>
+                                    <tr style="font-family: 'Kanit', sans-serif; font-weight:600;">
                                         <th>ชื่อ</th>
                                         <th>เบอร์โทรศัพท์</th>
                                         <th>แผนก</th>
