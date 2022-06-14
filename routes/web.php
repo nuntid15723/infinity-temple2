@@ -20,13 +20,20 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('user.profileuser');
 })->name('/');
 
 Route::get('/form', [AdminController::class, 'form'])->name('form');
 Route::get('/summaryle', [AdminController::class, 'summaryle'])->name('summaryle');
+Route::get('/profile', [AdminController::class, 'profile'])->name('ProFile');
+Route::get('/employee', [AdminController::class, 'employee'])->name('Employee');
+Route::get('/edit', [AdminController::class, 'edit'])->name('Edit');
+Route::get('/approve', [AdminController::class, 'approve'])->name('Approve');
+Route::get('/disapproved', [AdminController::class, 'disapproved'])->name('DisApproved');
+Route::get('/PendingApproval', [AdminController::class, 'PendingApproval'])->name('PendingApproval');
 
 Route::get('home', [HomeController::class, 'index'])->name('home');
+
 
 
 // call api

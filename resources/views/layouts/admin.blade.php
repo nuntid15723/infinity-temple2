@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> --}}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,6 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+    <script src="./js/plugins-init/bootstrap-input-spinner.js"></script>
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,15 +38,10 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kanit:wght@500;700&family=Mitr:wght@200&family=Prompt:wght@300&family=Roboto+Condensed&display=swap"
         rel="stylesheet">
     <style>
-        li:focus i,
-        .nk-sidebar .metismenu>li.active i {
-            color: #f7ff0a !important;
-        }
-
         .nk-sidebar .metismenu>li:hover i,
         .nk-sidebar .metismenu>li:focus i,
         .nk-sidebar .metismenu>li.active i {
-            color: #f7ff0a !important;
+            color: #d5a639 !important;
         }
 
         .nk-sidebar .metismenu>li a>i {
@@ -95,7 +93,7 @@
                 ***********************************-->
             <div class="nav-header" style="background-color: rgb(255, 255, 255);">
                 <div class="brand-logo">
-                    <a href="index.html">
+                    <a href="{{ url('/') }}" >
                         <b class="logo-abbr" style="margin: -7px;"><img src="images/logo.svg" alt=""> </b>
                         <span class="logo-compact"><img src="./images/logo-text-removebg-preview.png" alt=""></span>
                         <span class="brand-title">
@@ -130,7 +128,7 @@
                                     <div class="dropdown-content-body">
                                         <ul>
                                             <li>
-                                                <a href="app-profile.html"><i class="icon-user"></i>
+                                                <a href="{{ url('/profile') }}" ><i class="icon-user"></i>
                                                     <span>Profile</span></a>
                                             </li>
                                             <hr class="my-2">
@@ -142,11 +140,11 @@
                                             </li>
                                             <hr class="my-2">
                                             <li>
-                                                <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock
+                                                <a href="{{ url('/') }}" ><i class="icon-lock"></i> <span>Lock
                                                         Screen</span></a>
                                             </li>
                                             <hr class="my-2">
-                                            <li><a href="page-login.html"><i class="icon-key"></i>
+                                            <li><a href="{{url('#') }}" i class="icon-key"></i>
                                                     <span>Logout</span></a></li>
                                         </ul>
                                     </div>
@@ -160,7 +158,7 @@
                                     <div class="dropdown-content-body">
                                         <ul>
                                             <li>
-                                                <a href="app-profile.html"><i class="icon-user"></i>
+                                                <a href="{{ url('/profile') }}" ><i class="icon-user"></i>
                                                     <span>Profile</span></a>
                                             </li>
                                             <hr class="my-2">
@@ -169,7 +167,7 @@
                                                         Screen</span></a>
                                             </li>
                                             <hr class="my-2">
-                                            <li><a href="page-login.html"><i class="icon-key"></i>
+                                            <li><a href="{{ url('#')  }}" ><i class="icon-key"></i>
                                                     <span>Logout</span></a></li>
                                         </ul>
                                     </div>
@@ -340,13 +338,13 @@
                             </a>
                         </li>
                         <li class="mega-menu mega-menu-sm">
-                            <a class="has" href="index.html" alt="">
+                            <a class="has" href="{{ url('/employee') }}"  alt="">
                                 <i class="bi bi-people-fill menu-icon mr-2 " style="font-size: 1.8rem;"></i><span
                                     class="nav-text " style="font-size: 20px;">พนักงาน</span>
                             </a>
                         </li>
                         <li class="mega-menu mega-menu-sm">
-                            <a class="has" href="page-login.html" alt="">
+                            <a class="has" href="{{ url('#') }}"  alt="">
                                 <i class="bi bi-box-arrow-right menu-icon mr-2 " style="font-size: 1.8rem;"></i><span
                                     class="nav-text " style="font-size: 20px;">ออกจากระบบ</span>
                             </a>

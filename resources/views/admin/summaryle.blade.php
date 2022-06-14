@@ -8,7 +8,7 @@
     <div class="container-fluid mt-2 ">
         <div class="row ">
             <div class="col-lg-4 col-sm-4 ">
-                <a class="has" href="#" alt="">
+                <a class="has" href="{{ url('/PendingApproval') }}" alt="">
                     <div class="card gradient-1 "
                         style="background-image: linear-gradient(230deg, #FFA8A8, #FCFF00, #F7FA00 );">
                         <div class="card-body ">
@@ -25,7 +25,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-4 ">
-                <a class="has" href="#" alt="">
+                <a class="has" href="{{ url('/approve') }}" alt="">
                     <div class="card gradient-2 "
                         style="background-image: linear-gradient(230deg, #C6F6CB, #06C360,#1CF38C );">
                         <div class="card-body ">
@@ -41,7 +41,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-4 ">
-                <a class="has" href="#" alt="">
+                <a class="has" href="{{ url('/disapproved') }}" alt="">
                     <div class="card gradient-3 "
                         style="background-image: linear-gradient(230deg, #F8A8FF, #FD6585, #FC76A3);">
                         <div class="card-body ">
