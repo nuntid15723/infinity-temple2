@@ -20,7 +20,7 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', function () {
-    return view('user.profileuser');
+    return view('admin.home');
 })->name('/');
 
 Route::get('/form', [AdminController::class, 'form'])->name('form');
