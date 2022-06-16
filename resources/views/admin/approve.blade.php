@@ -33,7 +33,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6 ">
                     <div style="font-family: 'Kanit', sans-serif; font-weight:600;">
-                        <h1 class="m-0" style="color:#164176"><img src="{{ asset('images/approve.png') }}" 
+                        <h1 class="m-0" style="color:#164176"><img src="{{ asset('images/approve.png') }}"
                                 class="mr-3">อนุมัติสำเร็จ</h1>
                     </div>
                 </div><!-- /.col -->

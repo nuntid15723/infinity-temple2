@@ -6,7 +6,7 @@
 <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kanit:wght@500;700&family=Mitr:wght@200&family=Prompt:wght@300&family=Roboto+Condensed&display=swap"
     rel="stylesheet">
-@extends('layouts.admin')
+@extends('layouts.users')
 @section('content')
     {{-- <style>
     body{

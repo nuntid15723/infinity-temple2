@@ -3,15 +3,17 @@
     <div class="container-fluid mt-2">
         <div class="row " style="font-family: 'Kanit', sans-serif; font-weight:600;">
             <div class="col-lg-4 col-sm-4 ">
-                <div class="card gradient-1 ">
-                    <div class="card-body ">
-                        <h2 class="card-title text-white ">ยอดรวมการลา</h2>
-                        <div class="d-inline-block ">
-                            <h2 class="text-white ">4565</h2>
+                <a href="{{ url('/summaryle') }}">
+                    <div class="card gradient-1 ">
+                        <div class="card-body ">
+                            <h2 class="card-title text-white ">ยอดรวมการลา</h2>
+                            <div class="d-inline-block ">
+                                <h2 class="text-white ">4565</h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5 "><i class="bi bi-graph-up"></i></span>
                         </div>
-                        <span class="float-right display-5 opacity-5 "><i class="bi bi-graph-up"></i></span>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-4 col-sm-4 ">
                 <div class="card gradient-2 ">
@@ -25,15 +27,17 @@
                 </div>
             </div>
             <div class="col-lg-4 col-sm-4 ">
-                <div class="card gradient-3 ">
-                    <div class="card-body ">
-                        <h2 class="card-title text-white ">พนักงาน</h2>
-                        <div class="d-inline-block">
-                            <h2 class="text-white ">4565</h2>
+                <a href="{{ url('/employee') }}" alt="">
+                    <div class="card gradient-3 ">
+                        <div class="card-body ">
+                            <h2 class="card-title text-white ">พนักงาน</h2>
+                            <div class="d-inline-block">
+                                <h2 class="text-white ">4565</h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5 "><i class="fa fa-users "></i></span>
                         </div>
-                        <span class="float-right display-5 opacity-5 "><i class="fa fa-users "></i></span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -66,7 +70,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4 ">
-                    <div class="card "style=" margin-right: 30px;">
+                    <div class="card " style=" margin-right: 30px;">
                         <div class="card-body pb-0 d-flex justify-content-between ">
                             <div>
                                 <h4 class="mb-1 ">Product Sales</h4>
@@ -93,7 +97,7 @@
     </div>
     <div class="row">
         <div class="col-lg-12 ">
-            <div class="card "style="margin-left: 30PX; margin-right: 30px;">
+            <div class="card " style="margin-left: 30PX; margin-right: 30px;">
                 <div class="card-body ">
                     <div class="active-member " style="font-family: 'Prompt', sans-serif; font-weight:400;">
                         <div class="table-responsive ">

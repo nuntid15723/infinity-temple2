@@ -15,19 +15,19 @@ class LoginController extends Controller
     {
         return view('login');
     }
-    
+
     public function loginApi(Request $request)
     {
-        
+
         $request->validate([
-            'email' =>'required|email',
+            'numberPhone' =>'required|numberPhone',
             'password' =>'required|min:8',
         ]);
-        
+
         try{
 
         $http = new \GuzzleHttp\Client;
-        $email    = $request->email;
+        $numberPhone    = $request->numberPhone;
         $password = $request->password;
 
         $response = $http->post('http://localhost/laravel_api_basic/public/api/login?',[
@@ -35,20 +35,20 @@ class LoginController extends Controller
                 'Authorization'=>'Bearer'.session()->get('token.access_token')
             ],
             'query'=>[
-                'email'=>$email,
+                'numberPhone'=>$numberPhone,
                 'password'=>$password
             ]
         ]);
-        
+
         $result = json_decode((string)$response->getBody(),true);
         return redirect()->route('home');
 
         }catch(\Exception $e){
             return redirect()->back()->with('error','Login fail, Please try again.');
-        } 
+        }
     }
     public function logout()
-    { 
+    {
         Auth::logout();
         Session::flush();
         return redirect('login');

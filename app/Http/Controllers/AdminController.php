@@ -16,7 +16,8 @@ class AdminController extends Controller
         return view('admin.profile');
     }
     function employee(){
-        return view('admin.employee');
+        $name = " dijvgoir";
+        return view('admin.employee',['name'=>$name]);
     }
     function edit(){
         return view('admin.edit');

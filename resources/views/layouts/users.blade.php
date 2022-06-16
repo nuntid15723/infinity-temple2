@@ -130,7 +130,7 @@
                                     <div class="dropdown-content-body">
                                         <ul>
                                             <li>
-                                                <a href="{{ url('/profile') }}"><i class="icon-user"></i>
+                                                <a href="{{ url('/profileuser') }}"><i class="icon-user"></i>
                                                     <span>Profile</span></a>
                                             </li>
                                             <hr class="my-2">
@@ -160,11 +160,11 @@
                                     <div class="dropdown-content-body">
                                         <ul>
                                             <li>
-                                                <a href="{{ url('/profile') }}"><i class="icon-user"></i>
+                                                <a href="{{ url('/profileuser') }}"><i class="icon-user"></i>
                                                     <span>Profile</span></a>
                                             </li>
                                             <hr class="my-2">
-                                            
+
                                             <hr class="my-2">
                                             <li><a href="{{ url('login') }}"><i class="icon-key"></i>
                                                     <span>Logout</span></a></li>
@@ -314,36 +314,27 @@
                     <ul class="metismenu" id="menu">
                         <li class="nav-label">Dashboard</li>
                         <li>
-                            <a class="has" href="{{ url('/') }}" alt="">
+                            <a class="has" href="{{ url('/homeuser') }}" alt="">
                                 <i class="bi bi-house-door-fill menu-icon; mr-2 " style="font-size: 1.8rem;"></i><span
                                     class="nav-text" style="font-size: 20px;">หน้าหลัก</span>
                             </a>
-                            <!-- <ul aria-expanded="false">
-                            <li><a href="./index.html">Home 1</a></li>
-                            </ul> -->
                         </li>
                         <li class="mega-menu mega-menu-sm">
-                            <a class="has" href="{{ url('/form') }}" alt="">
+                            <a class="has" href="{{ url('/formuser') }}" alt="">
                                 <i class="bi bi-file-earmark-text-fill menu-icon  mr-2 "
                                     style="font-size: 1.8rem;"></i><span class="nav-text "
                                     style="font-size: 20px;">แบบฟอร์มใบลา</span>
                             </a>
                         </li>
                         <li class="mega-menu mega-menu-sm">
-                            <a class="has" href="{{ url('/summaryle') }}" alt="">
+                            <a class="has" href="{{ url('/history') }}" alt="">
                                 <i class="bi bi-bar-chart-line-fill menu-icon mr-2 "
                                     style="font-size: 1.8rem;"></i><span class="nav-text "
                                     style="font-size: 20px;">สรุปการลา</span>
                             </a>
                         </li>
                         <li class="mega-menu mega-menu-sm">
-                            <a class="has" href="{{ url('/employee') }}" alt="">
-                                <i class="bi bi-people-fill menu-icon mr-2 " style="font-size: 1.8rem;"></i><span
-                                    class="nav-text " style="font-size: 20px;">พนักงาน</span>
-                            </a>
-                        </li>
-                        <li class="mega-menu mega-menu-sm">
-                            <a class="has" href="{{ url('#') }}" alt="">
+                            <a class="has" href="{{ url('login') }}" alt="">
                                 <i class="bi bi-box-arrow-right menu-icon mr-2 " style="font-size: 1.8rem;"></i><span
                                     class="nav-text " style="font-size: 20px;">ออกจากระบบ</span>
                             </a>
@@ -418,15 +409,6 @@
         <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js "></script>
 
         <script src="./js/dashboard/dashboard-1.js "></script>
-        {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-        </script> --}}
 
 </body>
 

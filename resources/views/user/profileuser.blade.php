@@ -6,7 +6,7 @@
         rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kanit:wght@500;700&family=Mitr:wght@200&family=Prompt:wght@300&family=Roboto+Condensed&display=swap"
         rel="stylesheet">
-@extends('layouts.admin')
+@extends('layouts.users')
 @section('content')
 <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -57,7 +57,7 @@
                         <p class="card-text"><i class="bi bi-person-lines-fill"></i> แผนก</p>
                         <p class="card-text"><i class="bi bi-telephone-fill"></i></i> เบอรโทรศัพท์</p>
                         <p class="card-text"><i class="bi bi-gender-ambiguous"></i> เพศ</p>
-                                </div>            
+                                </div>
                 </div>
             </div>
             </div>
@@ -75,7 +75,7 @@
                                   <th class="text-primary" style="font-family: 'Kanit', sans-serif; font-weight:600;">วันที่ลา</th>
                                   <th class="text-warning" style="font-family: 'Kanit', sans-serif; font-weight:600;">วันที่สิ้นสุด</th>
                                   <th class="text-primary" style="font-family: 'Kanit', sans-serif; font-weight:600;">สถานะ</th>
-                                  <th class="text-warning" style="font-family: 'Kanit', sans-serif; font-weight:600;">ประเภทการลา</th> 
+                                  <th class="text-warning" style="font-family: 'Kanit', sans-serif; font-weight:600;">ประเภทการลา</th>
                                   <th></th>
                                 </tr>
                               </thead>
@@ -94,7 +94,7 @@
                                 </div>
                             </td>
                                   <td>ลากิจ</td>
-                                </tr>  
+                                </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>สุดสวย สวยที่สุด</td>
@@ -123,7 +123,7 @@
                                                     <h5 class="text-white " style="text-align: center;">ไม่อนุมัติ</h5>
                                                 </div>
                                             </div>
-                
+
                                     </td>
                                     <td>ลากิจ</td>
                                 </tr>
@@ -248,7 +248,7 @@
             </div>
           </div>
     </div>
-    
+
     </section>
     <!-- /.content -->
 @endsection

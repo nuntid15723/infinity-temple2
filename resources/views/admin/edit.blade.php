@@ -210,7 +210,7 @@
                             </div>
                         </div>
 
-                     
+
                         <div class="form-group row offset-4">
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-toggle="modal"

@@ -6,11 +6,51 @@
     }
 </style> --}}
 
-    {{-- <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <head>
+        {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head> --}}
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> --}}
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+            < link href = "css/bootstrap-datetimepicker.css"
+            rel = "stylesheet" >
+                <
+                script src = "js/bootstrap-datetimepicker.min.js" >
+                <
+                /> <link rel = "stylesheet"
+            href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+            integrity = "sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
+            crossorigin = "anonymous"
+            referrerpolicy = "no-referrer" >
+                <
+                script src = "https://kit.fontawesome.com/a076d05399.js"
+            crossorigin = "anonymous" >
+                <
+                />
+            {{-- js --}}
+                <
+                script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" >
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+                integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"
+                integrity="sha512-cp+S0Bkyv7xKBSbmjJR0K7va0cor7vHYhETzm2Jy//ZTQDUvugH/byC4eWuTii9o5HN9msulx2zqhEXWau20Dg=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./js/plugins-init/bootstrap-input-spinner.js"></script>
+
+        </script>
+        <style>
+            ..btn-primary:active,
+            .btn-primary:focus,
+            .btn-primary:hover {
+                background: #030051;
+                color: #fff;
+                border-color: #030063;
+            }
+        </style>
+    </head>
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid mt-2">
@@ -46,14 +86,16 @@
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLongTitle"
                                     style="font-family: 'Prompt', sans-serif; font-weight:600;"> <img
-                                        src="{{ asset('images/person.png') }}" alt="Infinity"
-                                        class="mr-3">เพิ่มพนักงาน </h5>
+                                        src="{{ asset('images/person.png') }}" alt="" class="mr-3">เพิ่มพนักงาน
+                                </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form>
+                                {{-- action="{{ route('add') }}" method="POST" --}}
+                                <form action="{{ route('addCustomer') }}" enctype="multipart/form-data " method="post">
+                                    @csrf
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputName">ชื่อ</label>
@@ -62,19 +104,19 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputLastname">นามสกุล</label>
-                                            <input type="text" class="form-control" id="inputLastname"
+                                            <input type="text" class="form-control" id="inputLastname" name="lastName"
                                                 placeholder="นามสกุล">
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputEmail">Email</label>
-                                            <input type="text" class="form-control" id="inputEmail"
+                                            <input type="text" class="form-control" id="inputEmail" name="email"
                                                 placeholder="infinity@example.com">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPhone">เบอรโทรศัพท์</label>
-                                            <input type="text" class="form-control" id="inputPhone"
+                                            <input type="text" class="form-control" id="inputPhone" name="numberPhone"
                                                 placeholder="1234567890">
                                         </div>
                                     </div>
@@ -82,35 +124,37 @@
                                         <div class="form-group col-md-6">
                                             <label for="inputPersoncard">เลขประจำตัวบัตรประชาชน</label>
                                             <input type="text" class="form-control" id="inputPersoncard"
-                                                placeholder="1212121212121">
+                                                name="PersoncardID" placeholder="1212121212121">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword">รหัสผ่าน</label>
-                                            <input type="text" class="form-control" id="inputPassword"
+                                            <input type="password" class="form-control" id="inputPassword" name="password"
                                                 placeholder="Password">
                                         </div>
                                     </div>
                                     <div class="form row">
                                         <div class="form-group col-md-6">
                                             <label for="inputBanknumber">เลขบัญชีธนาคาร</label>
-                                            <input type="text" class="form-control" id="inputBanknumber"
+                                            <input type="text" class="form-control" id="inputBanknumber" name="Banknumber"
                                                 placeholder="123456789">
                                         </div>
-                                        <form>
-                                            <div class="form-group col-md-6">
-                                                <label for="exampleFormControlFile1">รูปสมุดบัญชีธนาคาร</label>
-                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" style="margin-top: 10px;">
-                                            </div>
-                                        </form>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="ImgBank">รูปสมุดบัญชีธนาคาร</label>
+                                            <input type="file" class="form-control-file" id="ImgBank" name="ImgBank"
+                                                style="margin-top: 10px;">
+                                        </div>
+
                                     </div>
                                     <div class="form-group">
                                         <label for="inputSalary">ฐานเงินเดือน</label>
-                                        <input type="text" class="form-control" id="inputSalary" placeholder="25000">
+                                        <input type="text" class="form-control" id="inputSalary" name="Salary"
+                                            placeholder="25000">
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputDepartment">แผนก</label>
-                                            <select id="inputDepartment" class="form-control">
+                                            <select id="inputDepartment" class="form-control" name="Department">
                                                 <option selected>เลือกแผนก</option>
                                                 <option>UX/UI</option>
                                                 <option>Frontend</option>
@@ -119,7 +163,7 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputSex">เพศ</label>
-                                            <select id="inputSex" class="form-control">
+                                            <select id="inputSex" class="form-control" name="Sex">
                                                 <option selected>เลือกเพศ</option>
                                                 <option>ชาย</option>
                                                 <option>หญิง</option>
@@ -131,16 +175,30 @@
                                         <label class="col-sm-3 col-form-label"
                                             style="margin-bottom:8px; font-family: 'Kanit', sans-serif; font-weight:600;">วันที่เริ่มงาน</label>
                                         <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="datepicker4"
-                                                value="<?= date('d-m-y', strtotime(date('Y-m-d'))) ?>">
+                                            <input type="text" class="form-control" id="datepicker1" name="startwork"
+                                                value="<?= date('y-m-d', strtotime(date('Y-m-d'))) ?>">
+
+
                                         </div>
                                     </div>
+
+                                    <button type="submit" class="btn btn-primary" style="margin-right: 65px;
+                                                                                margin-left: 128px;   border-radius: 15px;"
+                                        id="save">บันทึก</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close"
+                                        style="margin-right: 54px; border-radius: 15px;color: #5e5e5e;
+                                                                            background-color: #fff;
+                                                                            border-color: #a3a3a3;
+                                                                          }">ยกเลิก</button>
+
+                                    {{-- <div class="modal-footer">
+
+                                        <button type="submit" class="btn btn-primary" style="margin-right: 123px;"
+                                            id="save">บันทึก</button>
+                                    </div> --}}
                                 </form>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger">ยกเลิก</button>
-                                <button type="button" class="btn btn-primary">บันทึก</button>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -177,7 +235,8 @@
                             <tr>
                                 <td>1</td>
                                 <td>1212121212121</td>
-                                <td>สุดสวย สวยที่สุด</td>
+                                {{-- <td>{{ $name }}</td> --}}
+                                <td>name</td>
                                 <td>tisot@example.com</td>
                                 <td>0645987321</td>
                                 <td>UX/UI</td>
@@ -293,7 +352,9 @@
                                                                     <input type="text" class="form-control"
                                                                         id="inputStrat" placeholder="21/05/2021">
                                                                 </div>
+                                                            </fieldset>
                                                         </form>
+
                                                         </fieldset>
                                                     </div>
                                                     <div class="modal-footer">
@@ -456,12 +517,31 @@
         </div>
     </div>
     <script type="text/javascript">
-        var date_start = new Date();
-        date_start.setDate(date_start.getDate());
-        $('#datepicker4').datepicker({
-            format: 'dd-mm-yyyy',
-            language: 'th',
-            startDate: date_start,
-        });
+        $('#save').on('click', function(e) {
+            console.log("asdsadsada")
+        })
+    </script>
+    <script>
+        {
+            $("input[type='number']").inputSpinner();
+        } {
+            var date_start = new Date(2018);
+            // console.log(date_start);
+            date_start.setDate(date_start.getDate());
+            $('#datepicker1').datepicker({
+                format: 'yyyy-mm-dd',
+                language: 'th',
+                startDate: date_start,
+
+            });
+        }
+    </script>
+    <script>
+        {
+            $("selector").datepicker({
+                altField: "#datepicker1"
+                altFormat: "yyyy-mm-dd"
+            });
+        }
     </script>
 @endsection
