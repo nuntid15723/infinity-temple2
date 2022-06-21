@@ -39,6 +39,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kanit:wght@500;700&family=Mitr:wght@200&family=Prompt:wght@300&family=Roboto+Condensed&display=swap"
         rel="stylesheet">
 
+    @yield('style')
+
     <style>
         .nk-sidebar .metismenu>li:hover i,
         .nk-sidebar .metismenu>li:focus i,
@@ -97,7 +99,8 @@
                 <div class="brand-logo">
                     <a href="{{ url('/') }}">
                         <b class="logo-abbr" style="margin: -7px;"><img src="images/logo.svg" alt=""> </b>
-                        <span class="logo-compact"><img src="./images/logo-text-removebg-preview.png" alt=""></span>
+                        <span class="logo-compact"><img src="./images/logo-text-removebg-preview.png"
+                                alt=""></span>
                         <span class="brand-title">
                             <img src="images/logo-text-removebg-preview.png" alt="">
                         </span>
@@ -146,7 +149,7 @@
                                                         Screen</span></a>
                                             </li>
                                             <hr class="my-2">
-                                            <li><a href="{{ url('login') }}" i class="icon-key"></i>
+                                            <li><a href="{{ url('logout') }}" i class="icon-key"></i>
                                                     <span>Logout</span></a></li>
                                         </ul>
                                     </div>
@@ -155,6 +158,7 @@
                             <li class="icons dropdown d-none d-md-flex">
                                 <a href="javascript:void(0)" class="log-user" data-toggle="dropdown">
                                     <span>name</span> <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
+                                    {{-- {{ Auth::user()->name }} --}}
                                 </a>
                                 <div class="drop-down dropdown-user animated fadeIn  dropdown-menu">
                                     <div class="dropdown-content-body">
@@ -164,9 +168,9 @@
                                                     <span>Profile</span></a>
                                             </li>
                                             <hr class="my-2">
-                                            
+
                                             <hr class="my-2">
-                                            <li><a href="{{ url('login') }}"><i class="icon-key"></i>
+                                            <li><a href="{{ url('logout') }}"><i class="icon-key"></i>
                                                     <span>Logout</span></a></li>
                                         </ul>
                                     </div>
@@ -343,7 +347,7 @@
                             </a>
                         </li>
                         <li class="mega-menu mega-menu-sm">
-                            <a class="has" href="{{ url('#') }}" alt="">
+                            <a class="has" href="{{ url('logout') }}" alt="">
                                 <i class="bi bi-box-arrow-right menu-icon mr-2 " style="font-size: 1.8rem;"></i><span
                                     class="nav-text " style="font-size: 20px;">ออกจากระบบ</span>
                             </a>
@@ -393,29 +397,35 @@
         <!--**********************************
                      Scripts
         *   **********************************-->
-        <script src="plugins/common/common.min.js "></script>
-        <script src="js/custom.min.js "></script>
-        <script src="js/settings.js "></script>
-        <script src="js/gleek.js "></script>
-        <script src="js/styleSwitcher.js "></script>
+        {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        <script src = "https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity = "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"> --}}
+
+
+        <script src="{{ asset('plugins/common/common.min.js') }}"></script>
+        <script src="{{ asset('js/custom.min.js')}}"></script>
+        <script src="{{ asset('js/settings.js')}}"></script>
+        <script src="{{ asset("js/gleek.js")}}"></script>
+        <script src="{{ asset('js/styleSwitcher.js')}}"></script>
 
         <!-- Chartjs -->
-        <script src="./plugins/chart.js/Chart.bundle.min.js "></script>
+        <script src="{{ asset('./plugins/chart.js/Chart.bundle.min.js')}} "></script>
         <!-- Circle progress -->
-        <script src="./plugins/circle-progress/circle-progress.min.js "></script>
+        <script src="{{ asset('./plugins/circle-progress/circle-progress.min.js')}} "></script>
         <!-- Datamap -->
-        <script src="./plugins/d3v3/index.js "></script>
-        <script src="./plugins/topojson/topojson.min.js "></script>
-        <script src="./plugins/datamaps/datamaps.world.min.js "></script>
+        <script src="{{ asset('./plugins/d3v3/index.js ')}}"></script>
+        <script src="{{ asset('./plugins/topojson/topojson.min.js')}} "></script>
+        <script src="{{ asset('./plugins/datamaps/datamaps.world.min.js')}} "></script>
         <!-- Morrisjs -->
-        <script src="./plugins/raphael/raphael.min.js "></script>
-        <script src="./plugins/morris/morris.min.js "></script>
+        <script src="{{ asset('./plugins/raphael/raphael.min.js')}} "></script>
+        <script src="{{ asset('./plugins/morris/morris.min.js')}} "></script>
         <!-- Pignose Calender -->
-        <script src="./plugins/moment/moment.min.js "></script>
-        <script src="./plugins/pg-calendar/js/pignose.calendar.min.js "></script>
+        <script src="{{ asset('./plugins/moment/moment.min.js ')}}"></script>
+        <script src="{{ asset('./plugins/pg-calendar/js/pignose.calendar.min.js')}} "></script>
         <!-- ChartistJS -->
-        <script src="./plugins/chartist/js/chartist.min.js "></script>
-        <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js "></script>
+        <script src="{{ asset('./plugins/chartist/js/chartist.min.js')}} "></script>
+        <script src="{{ asset('./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js')}} "></script>
 
         <script src="./js/dashboard/dashboard-1.js "></script>
         {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -427,6 +437,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
                 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
         </script> --}}
+
+        @yield('script')
 
 </body>
 

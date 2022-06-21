@@ -37,7 +37,7 @@
                     <br />
                     <br />
                     <br />
-                    <a  href="{{ url('/') }}"><img src={{ '/images/logo.svg' }} alt=""></a>
+                    <a  href="{{ url('home') }}"><img src={{ '/images/infinityV2.png' }} style="width: 220px;" alt=""></a>
                 </div>
 
                 <div class="col-md-4 offset-3 ">
@@ -56,7 +56,7 @@
 
                         <div class="row mb-4" style="margin: auto;">
                             <div class="col-md-6 offset-md-2">
-                                <input id="numberPhone" type="numberPhone"
+                                <input id="numberPhone" type="text"
                                     class="form-control @error('numberPhone') is-invalid @enderror"
                                     placeholder="เบอร์โทร" name="numberPhone" value="{{ old('numberPhone') }}"
                                     required autocomplete="numberPhone" autofocus>

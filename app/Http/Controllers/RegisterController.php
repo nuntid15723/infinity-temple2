@@ -15,7 +15,7 @@ class RegisterController extends Controller
     // post register
     public function registerApi(Request $request)
     {
-          dd($request->all());
+        //   dd($request->all());
         $request->validate([
             'name' => 'required',
             'lastName' => 'required',

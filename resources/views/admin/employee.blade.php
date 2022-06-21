@@ -1,64 +1,56 @@
 @extends('layouts.admin')
-@section('content')
-    {{-- <style>
-    body{
-        font-family: 'Kanit', sans-serif; font-weight:600;
-    }
-</style> --}}
-
-
-    <head>
-        {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    < script src = "https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity = "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin = "anonymous" >
+        <
+        /> <link href = "css/bootstrap - datetimepicker.css "
+    rel = "stylesheet" >
+        <script src = "js/bootstrap-datetimepicker.min.js" >
+        <
+        />         <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+            integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        {{-- js --}}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> --}}
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-            < link href = "css/bootstrap-datetimepicker.css"
-            rel = "stylesheet" >
-                <
-                script src = "js/bootstrap-datetimepicker.min.js" >
-                <
-                /> <link rel = "stylesheet"
-            href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
-            integrity = "sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
-            crossorigin = "anonymous"
-            referrerpolicy = "no-referrer" >
-                <
-                script src = "https://kit.fontawesome.com/a076d05399.js"
-            crossorigin = "anonymous" >
-                <
-                />
-            {{-- js --}}
-                <
-                script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" >
-        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
                 integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
                 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"
                 integrity="sha512-cp+S0Bkyv7xKBSbmjJR0K7va0cor7vHYhETzm2Jy//ZTQDUvugH/byC4eWuTii9o5HN9msulx2zqhEXWau20Dg=="
                 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="./js/plugins-init/bootstrap-input-spinner.js"></script>
+    <style>
+    .btn-primary:active,
+    .btn-primary:focus,
+    .btn-primary:hover {
+        background: #030051;
+        color: #fff;
+        border-color: #030063;
+    }
+</style>
+</script>
+<script src="./js/plugins-init/bootstrap-input-spinner.js"></script>
+</head>
 
-        </script>
-        <style>
-            ..btn-primary:active,
-            .btn-primary:focus,
-            .btn-primary:hover {
-                background: #030051;
-                color: #fff;
-                border-color: #030063;
-            }
-        </style>
-    </head>
+@section('content')
+    {{-- <style>
+    body{
+        font-family: 'Kanit', sans-serif; font-weight:600;
+    }
+</style> --}}
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid mt-2">
             <div class="row mb-2">
                 <div class="col-sm-6 ">
                     <div>
-                        <h1 class="m-0"
-                            style="font-family: 'Kanit', sans-serif; font-weight:600; color: #164176;"><img
+                        <h1 class="m-0" style="font-family: 'Kanit', sans-serif; font-weight:600; color: #164176;"><img
                                 src="{{ asset('images/person.png') }}" alt="" class="mr-3">รายชื่อพนักงาน
                         </h1>
                     </div>
@@ -76,7 +68,7 @@
     </div>
     <div class="container">
         <div class="card" style="font-family: 'Prompt', sans-serif; font-weight:400;">
-            <div class="col-lg-12">
+            <div class="col-lg-14">
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
@@ -93,63 +85,129 @@
                                 </button>
                             </div>
                             <div class="modal-body">
+                                @if (\Session::has('error'))
+                                    <div id="error" class="text-danger">
+                                        {!! \Session::get('error') !!}
+                                    </div>
+                                @endif
                                 {{-- action="{{ route('add') }}" method="POST" --}}
-                                <form action="{{ route('addCustomer') }}" enctype="multipart/form-data " method="post">
+                                <form method="POST" action="{{ route('addCustomer') }}" enctype="multipart/form-data ">
                                     @csrf
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputName">ชื่อ</label>
-                                            <input type="text" class="form-control" id="inputName" name="name"
-                                                placeholder="ชื่อ">
+                                            <input type="text" class="form-control @error('name') is-invalid @enderror "
+                                                id="inputName"name="name" value="{{ old('name') }}" placeholder="ชื่อ">
+                                            @error('name')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputLastname">นามสกุล</label>
-                                            <input type="text" class="form-control" id="inputLastname" name="lastName"
+                                            <input type="text"
+                                                class="form-control @error('lastName') is-invalid @enderror"
+                                                id="inputLastname" name="lastName" value="{{ old('lastName') }}"
                                                 placeholder="นามสกุล">
+                                            @error('lastName')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputEmail">Email</label>
-                                            <input type="text" class="form-control" id="inputEmail" name="email"
+                                            <input type="text" class="form-control @error('email') is-invalid @enderror"
+                                                id="inputEmail" name="email" value="{{ old('email') }}"
                                                 placeholder="infinity@example.com">
+                                            @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPhone">เบอรโทรศัพท์</label>
-                                            <input type="text" class="form-control" id="inputPhone" name="numberPhone"
+                                            <input type="text"
+                                                class="form-control @error('numberPhone') is-invalid @enderror"
+                                                id="inputPhone" name="numberPhone" value="{{ old('numberPhone') }}"
                                                 placeholder="1234567890">
+                                            @error('numberPhone')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputPersoncard">เลขประจำตัวบัตรประชาชน</label>
-                                            <input type="text" class="form-control" id="inputPersoncard"
-                                                name="PersoncardID" placeholder="1212121212121">
+                                            <input type="text"
+                                                class="form-control @error('PersoncardID') is-invalid @enderror"
+                                                id="inputPersoncard" name="PersoncardID"
+                                                value="{{ old('PersoncardID') }}" placeholder="1212121212121">
+                                            @error('PersoncardID')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputPassword">รหัสผ่าน</label>
-                                            <input type="password" class="form-control" id="inputPassword" name="password"
+                                            <input type="password"
+                                                class="form-control @error('password') is-invalid @enderror"
+                                                id="inputPassword" name="password" value="{{ old('password') }}"
                                                 placeholder="Password">
+                                            @error('password')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="form row">
                                         <div class="form-group col-md-6">
                                             <label for="inputBanknumber">เลขบัญชีธนาคาร</label>
-                                            <input type="text" class="form-control" id="inputBanknumber" name="Banknumber"
+                                            <input type="text"
+                                                class="form-control  @error('Banknumber') is-invalid @enderror"
+                                                id="inputBanknumber" name="Banknumber" value="{{ old('Banknumber') }}"
                                                 placeholder="123456789">
+                                            @error('Banknumber')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+
                                         </div>
 
                                         <div class="form-group col-md-6">
                                             <label for="ImgBank">รูปสมุดบัญชีธนาคาร</label>
-                                            <input type="file" class="form-control-file" id="ImgBank" name="ImgBank"
+                                            <input type="file"
+                                                class="form-control-file @error('Imgbank') is-invalid @enderror"
+                                                id="ImgBank" name="ImgBank" value="{{ old('Imgbank') }}"
                                                 style="margin-top: 10px;">
+                                            @error('Imgbank')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
 
                                     </div>
                                     <div class="form-group">
                                         <label for="inputSalary">ฐานเงินเดือน</label>
-                                        <input type="text" class="form-control" id="inputSalary" name="Salary"
+                                        <input type="text" class="form-control @error('Salary') is-invalid @enderror"
+                                            id="inputSalary" name="Salary" value="{{ old('Salary') }}"
                                             placeholder="25000">
+                                        @error('Salary')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
@@ -182,10 +240,12 @@
                                         </div>
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary" style="margin-right: 65px;
+                                    <button type="submit" class="btn btn-primary"
+                                        style="margin-right: 65px;
                                                                                 margin-left: 128px;   border-radius: 15px;"
                                         id="save">บันทึก</button>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close"
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                        aria-label="Close"
                                         style="margin-right: 54px; border-radius: 15px;color: #5e5e5e;
                                                                             background-color: #fff;
                                                                             border-color: #a3a3a3;
@@ -232,295 +292,252 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>1212121212121</td>
-                                {{-- <td>{{ $name }}</td> --}}
-                                <td>name</td>
-                                <td>tisot@example.com</td>
-                                <td>0645987321</td>
-                                <td>UX/UI</td>
-                                <td>25000</td>
-                                <td>05/05/2021</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button class="btn btn-white" style="background-color: rgb(255, 255, 255)"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <!-- Modal -->
-                                            <a class="dropdown-item" data-target="#exampleModal"
-                                                data-toggle="modal">รายละเอียด
-                                            </a>
-                                            <a class="dropdown-item" href="#">แก้ไข</a>
-                                            <a class="dropdown-item" href="#">ลบ</a>
-                                        </div>
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h3 class="modal-title" id="exampleModalLabel"><i
-                                                                class="bi bi-search"></i> ข้อมูลพนักงาน</h3>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <form>
-                                                            <fieldset disabled>
-                                                                <div class="form-row">
-                                                                    <div class="form-group col-md-6">
-                                                                        <label for="disabledTextInput">ชื่อ</label>
-                                                                        <input type="text" class="form-control"
-                                                                            id="disabledTextInput" placeholder="สุดสวย">
-                                                                    </div>
-                                                                    <div class="form-group col-md-6">
-                                                                        <label for="inputLastname">นามสกุล</label>
-                                                                        <input type="text" class="form-control"
-                                                                            id="inputLastname" placeholder="สวยที่สุด">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-row">
-                                                                    <div class="form-group col-md-6">
-                                                                        <label for="inputEmail">Email</label>
-                                                                        <input type="text" class="form-control"
-                                                                            id="inputEmail"
-                                                                            placeholder="infinity@example.com">
-                                                                    </div>
-                                                                    <div class="form-group col-md-6">
-                                                                        <label for="inputPhone">เบอรโทรศัพท์</label>
-                                                                        <input type="text" class="form-control"
-                                                                            id="inputPhone" placeholder="0659867562">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-row">
-                                                                    <div class="form-group col-md-6">
-                                                                        <label
-                                                                            for="inputPersoncard">เลขประจำตัวบัตรประชาชน</label>
-                                                                        <input type="text" class="form-control"
-                                                                            id="inputPersoncard"
-                                                                            placeholder="1212121212121">
-                                                                    </div>
-                                                                    <div class="form-group col-md-6">
-                                                                        <label for="inputPassword">รหัสผ่าน</label>
-                                                                        <input type="text" class="form-control"
-                                                                            id="inputPassword" placeholder="123456">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form row">
-                                                                    <div class="form-group col-md-6">
-                                                                        <label for="inputBanknumber">เลขบัญชีธนาคาร</label>
-                                                                        <input type="text" class="form-control"
-                                                                            id="inputBanknumber" placeholder="123456789">
-                                                                    </div>
-                                                                    <form>
-                                                                        <div class="form-group col-md-6">
-                                                                            <label
-                                                                                for="exampleFormControlFile1">รูปสมุดบัญชีธนาคาร</label>
-                                                                            <input type="file" class="form-control-file"
-                                                                                id="exampleFormControlFile1"
-                                                                                style="margin-top: 10px;">
-                                                                        </div>
-                                                                    </form>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="inputSalary">ฐานเงินเดือน</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inputSalary" placeholder="25000">
-                                                                </div>
-                                                                <div class="form-row">
-                                                                    <div class="form-group col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label for="inputDepartment">แผนก</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="inputDepartment" placeholder="UX/UI">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="form-group col-md-6">
-                                                                        <div class="form-group">
-                                                                            <label for="inputSex">เพศ</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="inputSex" placeholder="หญิง">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="inputStart">วันที่เริ่มงาน</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inputStrat" placeholder="21/05/2021">
-                                                                </div>
-                                                            </fieldset>
-                                                        </form>
 
-                                                        </fieldset>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button"
-                                                            class="badeg badge-pill btn btn-secondary btn btn-white "
-                                                            data-dismiss="modal">ยกเลิก</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </td>
-                                </td>
-                            </tr>
+                            @php
+                                $i = 0;
 
-                            <tr>
-                                <td>1</td>
-                                <td>1212121212121</td>
-                                <td>สุดสวย สวยที่สุด</td>
-                                <td>tisot@example.com</td>
-                                <td>0645987321</td>
-                                <td>UX/UI</td>
-                                <td>25000</td>
-                                <td>05/05/2021</td>
-                                <td>
-                                    <!-- Example single danger button -->
-                                    <div class="btn-group">
-                                        <button class="btn btn-white" style="background-color: rgb(255, 255, 255)"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">ดูรายละเอียด</a>
-                                            <a class="dropdown-item" href="#">แก้ไข</a>
-                                            <a class="dropdown-item" href="#">ลบ</a>
-                                        </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>1212121212121</td>
-                                <td>สุดสวย สวยที่สุด</td>
-                                <td>tisot@example.com</td>
-                                <td>0645987321</td>
-                                <td>UX/UI</td>
-                                <td>25000</td>
-                                <td>05/05/2021</td>
-                                <td>
-                                    <!-- Example single danger button -->
-                                    <div class="btn-group">
-                                        <button class="btn btn-white" style="background-color: rgb(255, 255, 255)"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">ดูรายละเอียด</a>
-                                            <a class="dropdown-item" href="#">แก้ไข</a>
-                                            <a class="dropdown-item" href="#">ลบ</a>
-                                        </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>1212121212121</td>
-                                <td>สุดสวย สวยที่สุด</td>
-                                <td>tisot@example.com</td>
-                                <td>0645987321</td>
-                                <td>UX/UI</td>
-                                <td>25000</td>
-                                <td>05/05/2021</td>
-                                <td>
-                                    <!-- Example single danger button -->
-                                    <div class="btn-group">
-                                        <button class="btn btn-white" style="background-color: rgb(255, 255, 255)"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">ดูรายละเอียด</a>
-                                            <a class="dropdown-item" href="#">แก้ไข</a>
-                                            <a class="dropdown-item" href="#">ลบ</a>
-                                        </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>1212121212121</td>
-                                <td>สุดสวย สวยที่สุด</td>
-                                <td>tisot@example.com</td>
-                                <td>0645987321</td>
-                                <td>UX/UI</td>
-                                <td>25000</td>
-                                <td>05/05/2021</td>
-                                <td>
-                                    <!-- Example single danger button -->
-                                    <div class="btn-group">
-                                        <button class="btn btn-white" style="background-color: rgb(255, 255, 255)"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">ดูรายละเอียด</a>
-                                            <a class="dropdown-item" href="#">แก้ไข</a>
-                                            <a class="dropdown-item" href="#">ลบ</a>
-                                        </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>1212121212121</td>
-                                <td>สุดสวย สวยที่สุด</td>
-                                <td>tisot@example.com</td>
-                                <td>0645987321</td>
-                                <td>UX/UI</td>
-                                <td>25000</td>
-                                <td>05/05/2021</td>
-                                <td>
-                                    <!-- Example single danger button -->
-                                    <div class="btn-group">
-                                        <button class="btn btn-white" style="background-color: rgb(255, 255, 255)"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">ดูรายละเอียด</a>
-                                            <a class="dropdown-item" href="#">แก้ไข</a>
-                                            <a class="dropdown-item" href="#">ลบ</a>
-                                        </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>1212121212121</td>
-                                <td>สุดสวย สวยที่สุด</td>
-                                <td>tisot@example.com</td>
-                                <td>0645987321</td>
-                                <td>UX/UI</td>
-                                <td>25000</td>
-                                <td>05/05/2021</td>
-                                <div class="modal-dialog modal-sm">
+                            @endphp
+
+                            @foreach ($users as $cus)
+                                <tr>
+
+                                    <td>{{ ++ $i }}</td>
+                                    <td>{{ $cus->PersoncardID }}</td>
+                                    <td>{{ $cus->name }}</td>
+                                    <td>{{Str::limit($cus->email, '25','..')}}</td>
+                                    <td>{{ $cus->numberPhone }}</td>
+                                    <td>{{ $cus->Department }}</td>
+                                    <td>{{ $cus->Salary }}</td>
+                                    <td>{{ $cus->startwork }}</td>
                                     <td>
-                                        <!-- Example single danger button -->
                                         <div class="btn-group">
                                             <button class="btn btn-white" style="background-color: rgb(255, 255, 255)"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="bi bi-three-dots-vertical"></i>
                                             </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">ดูรายละเอียด</a>
-                                                <a class="dropdown-item" href="#">แก้ไข</a>
-                                                <a class="dropdown-item" href="#">ลบ</a>
+                                                <!-- Modal -->
+
+                                                <button onclick="getData({{ $cus->id }})"
+                                                    data-url="{{ route('users.show', $cus->name) }}"
+                                                    class="dropdown-item" data-target="#exampleModal" data-toggle="modal"
+                                                    type="button" style="color: #000;">รายละเอียด
+                                                </button>
+                                                <a class="dropdown-item" data-target="#exampleModal" type="button"
+                                                    style="color: #000;"href={{ '/editCustomer/' . $cus['id'] }}>แก้ไข
+                                                </a>
+                                                <a class="dropdown-item" data-target="#exampleModal" type="button"
+                                                    style="color: #000;"href={{ '/deleteCustomer/' . $cus['id'] }}>ลบ
+                                                </a>
+                                            </div>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h3 class="modal-title" id="exampleModalLabel">
+                                                                ข้อมูลพนักงาน
+                                                            </h3>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <fieldset disabled>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-md-6"style="margin: auto;">
+                                                                            <p><strong>ชื่อ</strong>&nbsp;&nbsp;<strong class="input"
+                                                                                    id="user-name"></strong></p>
+
+                                                                        </div>
+                                                                        <div class="form-group col-md-6"style="margin: auto;">
+                                                                            <p><strong>นามสกุล</strong>&nbsp;&nbsp;<strong
+                                                                                    id="user-lastName"></strong></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-md-6"style="margin: auto;">
+                                                                            <p><strong>Email</strong><br><strong
+                                                                                    id="user-email"></strong></p>
+
+                                                                        </div>
+                                                                        <div class="form-group col-md-6"style="margin: auto;">
+                                                                            <p><strong>เบอรโทรศัพท์</strong><br><strong
+                                                                                    id="user-numberPhone"></strong></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-md-6"style="margin: auto;">
+                                                                            <p><strong>เลขประจำตัวบัตรประชาชน</strong><br><strong
+                                                                                    id="user-PersoncardID"></strong></p>
+
+                                                                        </div>
+                                                                        <div class="form-group col-md-6"style="margin: auto;">
+                                                                            <p><strong>รหัสผ่าน</strong><br><strong
+                                                                                    id="user-"></strong></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-md-6"style="margin: auto;">
+                                                                            <p><strong>เลขบัญชีธนาคาร</strong><br><strong
+                                                                                    id="user-Banknumber"></strong></p>
+
+                                                                        </div>
+                                                                        <div class="form-group col-md-6" style="margin: auto;">
+                                                                            <p><strong>รูปสมุดบัญชีธนาคาร</strong><br><strong
+                                                                                    id="user-ImgBank"></strong></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-md-6" >
+                                                                            <p><strong>ฐานเงินเดือน</strong><br><strong
+                                                                                    id="user-Salary"></strong></p>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-md-6" style="margin: auto;">
+                                                                            <p style="text-align: center;"><strong>แผนก</strong><br><strong
+                                                                                    id="user-Department"></strong></p>
+                                                                        </div>
+                                                                        <div class="form-group col-md-6" style="margin: auto;">
+                                                                            <p style="text-align: center;"><strong>เพศ</strong><br><strong
+                                                                                    id="user-Sex"></strong></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-md-6" style="margin: auto;">
+                                                                            <p   style="text-align: center;"><strong>วันที่เริ่มงาน</strong><br><strong
+                                                                                    id="user-startwork"></strong></p>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </fieldset>
+                                                            </form>
+
+                                                            {{-- <form>
+                                                                <fieldset disabled>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-md-6">
+                                                                            <label for="disabledTextInput">ชื่อ</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="disabledTextInput"
+                                                                                value=" {{ $cus->name }}">
+                                                                        </div>
+                                                                        <div class="form-group col-md-6">
+                                                                            <label for="inputLastname">นามสกุล</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="inputLastname"
+                                                                                value=" {{ $cus->lastName }}">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-md-6">
+                                                                            <label for="inputEmail">Email</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="inputEmail"
+                                                                                value=" {{ $cus->email }}">
+                                                                        </div>
+                                                                        <div class="form-group col-md-6">
+                                                                            <label for="inputPhone">เบอรโทรศัพท์</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="inputPhone"
+                                                                                value=" {{ $cus->numberPhone }}">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-md-6">
+                                                                            <label
+                                                                                for="inputPersoncard">เลขประจำตัวบัตรประชาชน</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="inputPersoncard"
+                                                                                value=" {{ $cus->PersoncardID }}">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form row">
+                                                                        <div class="form-group col-md-6">
+                                                                            <label
+                                                                                for="inputBanknumber">เลขบัญชีธนาคาร</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="inputBanknumber"
+                                                                                value=" {{ $cus->Banknumber }}">
+                                                                        </div>
+                                                                        <form>
+                                                                            <div class="form-group col-md-6">
+                                                                                <label
+                                                                                    for="exampleFormControlFile1">รูปสมุดบัญชีธนาคาร</label>
+                                                                                <input type="file"
+                                                                                    class="form-control-file"
+                                                                                    id="exampleFormControlFile1"
+                                                                                    value=" {{ $cus->ImgBank }}">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="inputSalary">ฐานเงินเดือน</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="inputSalary"
+                                                                            value=" {{ $cus->Salary }}">
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="inputDepartment">แผนก</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="inputDepartment"
+                                                                                    value=" {{ $cus->Department }}">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label for="inputSex">เพศ</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="inputSex"
+                                                                                    value=" {{ $cus->Sex }}">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="inputStart">วันที่เริ่มงาน</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="inputStrat"
+                                                                            value=" {{ $cus->startwork }}">
+                                                                    </div>
+                                                                </fieldset>
+                                                            </form> --}}
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button"
+                                                                class="badeg badge-pill btn btn-secondary btn btn-white "
+                                                                data-dismiss="modal">ยกเลิก</button>
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
                                             </div>
                                     </td>
-                                </div>
-                            </tr>
+                                </tr>
+                            @endforeach
+
+
                         </tbody>
                     </table>
+                    <div class="row">{{ $users->links() }}</div>
                 </div>
                 <!-- /.content-header -->
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        $('#save').on('click', function(e) {
-            console.log("asdsadsada")
-        })
-    </script>
+
     <script>
         {
             $("input[type='number']").inputSpinner();
@@ -544,4 +561,27 @@
             });
         }
     </script>
+    <script type="text/javascript">
+        function getData(id) {
+            var url = "{{ route('users.show', ':id') }}";
+            url = url.replace(':id', id);
+
+            $.get(url, function(data) {
+                $('#exampleModal').modal('show');
+                $('#user-id').text(data.id);
+                $('#user-name').text(data.name);
+                $('#user-lastName').text(data.lastName);
+                $('#user-email').text(data.email);
+                $('#user-numberPhone').text(data.numberPhone);
+                $('#user-PersoncardID').text(data.PersoncardID);
+                $('#user-Banknumber').text(data.Banknumber);
+                $('#user-ImgBank').text(data.ImgBank);
+                $('#user-Salary').text(data.Salary);
+                $('#user-Department').text(data.Department);
+                $('#user-Sex').text(data.Sex);
+                $('#user-startwork').text(data.startwork);
+            })
+        }
+    </script>
 @endsection
+

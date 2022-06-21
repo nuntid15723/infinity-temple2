@@ -9,6 +9,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AddcustomerController;
 use App\Http\Controllers\TypeofleaveController;
 use App\Http\Controllers\UsersController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,11 +23,12 @@ use App\Http\Controllers\UsersController;
 */
 
 Route::get('/', function () {
-    return view('admin.home');
-})->name('/');
+        return view('admin.home');
+});
 
 Route::get('home', [HomeController::class, 'index'])->name('home');
 
+Route::get('/home', [AdminController::class, 'index'])->name('home');
 Route::get('/form', [AdminController::class, 'form'])->name('form');
 Route::get('/summaryle', [AdminController::class, 'summaryle'])->name('summaryle');
 Route::get('/profile', [AdminController::class, 'profile'])->name('ProFile')->middleware('check');
@@ -44,7 +46,10 @@ Route::get('/history', [UsersController::class, 'history'])->name('history');
 
 
 Route::get('/employee', [AddcustomerController::class, 'index']);
+Route::post('/edit', [AddcustomerController::class, 'index'])->name('Edit');
+Route::get('users/{id}', [AddcustomerController::class, 'show'])->name('users.show');
 Route::post('addCustomer', [AddcustomerController::class, 'addCustomer'])->name('addCustomer');
+Route::get('/deleteCustomer/{id}', [AddcustomerController::class, 'DeleteCustomer'])->name('DeleteCustomer');
 Route::get('/form', [TypeofleaveController::class, 'index']);
 Route::post('insertform', [TypeofleaveController::class, 'insertform'])->name('insertform');
 Route::post('add', [UsersController::class, 'add'])->name('addd');
@@ -58,7 +63,7 @@ Route::get('view/detail/users', [HomeController::class, 'index'])->name('view/de
 // login api
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('loginApi', [LoginController::class, 'loginApi'])->name('loginApi');
-// Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('logout', [LoginController::class, 'logout'])->name('logout1');
 
 
 // register api
@@ -69,4 +74,11 @@ Route::post('registerApi', [RegisterController::class, 'registerApi'])->name('re
 Route::get('form/product/new', [ProductController::class, 'index'])->name('form/product/new');
 
 Auth::routes();
+// Route::get('home', [HomeController::class, 'index'])->name('home');
+// // Route::get('/homelogin', [App\Http\Controllers\HomeController::class, 'index'])->name('homelogin');
 
+// Route::get('home', [App\Http\Controllers\HomeController::class, 'admin_in'])->name('admin');
+
+// Route::get('/employee', [App\Http\Controllers\HomeController::class, 'admin_create'])->name('create');
+
+//

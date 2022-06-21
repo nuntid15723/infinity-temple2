@@ -51,8 +51,17 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'lastName' => ['required', 'string', 'max:255'],
+            'numberPhone' => ['required', 'string', 'numberPhone', 'max:25', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'email' => ['required', 'string', 'email', 'max:25', 'unique:users'],
+            'PersoncardID' => ['required', 'string', 'min:8', 'confirmed'],
+            'Banknumber' => ['required', 'string', 'min:8', 'confirmed'],
+            'ImgBank' => ['required', 'string', 'min:8', 'confirmed'],
+            'Salary' => ['required', 'string', 'min:8', 'confirmed'],
+            'Department' => ['required', 'string', 'min:8', 'confirmed'],
+            'Sex' => ['required', 'string', 'min:8', 'confirmed'],
+            'startwork' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
@@ -66,8 +75,17 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
-            'email' => $data['email'],
+            'lastName' =>$data['lastName'],
+            'numberPhone' => $data['numberPhone'],
             'password' => Hash::make($data['password']),
+            'email' => $data['email'],
+            'PersoncardID' => $data['PersoncardID'],
+            'Banknumber' => $data['Banknumber'],
+            'ImgBank' => $data['ImgBank'],
+            'Salary' => $data['Salary'],
+            'Department' => $data['Department'],
+            'Sex' => $data['Sex'],
+            'startwork' => $data['startwork'],
         ]);
     }
 }

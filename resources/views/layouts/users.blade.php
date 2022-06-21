@@ -146,7 +146,7 @@
                                                         Screen</span></a>
                                             </li>
                                             <hr class="my-2">
-                                            <li><a href="{{ url('login') }}" i class="icon-key"></i>
+                                            <li><a href="{{ url('logout') }}" i class="icon-key"></i>
                                                     <span>Logout</span></a></li>
                                         </ul>
                                     </div>
@@ -166,7 +166,7 @@
                                             <hr class="my-2">
 
                                             <hr class="my-2">
-                                            <li><a href="{{ url('login') }}"><i class="icon-key"></i>
+                                            <li><a href="{{ url('logout') }}"><i class="icon-key"></i>
                                                     <span>Logout</span></a></li>
                                         </ul>
                                     </div>
@@ -334,7 +334,7 @@
                             </a>
                         </li>
                         <li class="mega-menu mega-menu-sm">
-                            <a class="has" href="{{ url('login') }}" alt="">
+                            <a class="has" href="{{ url('logout') }}" alt="">
                                 <i class="bi bi-box-arrow-right menu-icon mr-2 " style="font-size: 1.8rem;"></i><span
                                     class="nav-text " style="font-size: 20px;">ออกจากระบบ</span>
                             </a>
